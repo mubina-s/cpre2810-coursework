@@ -1,0 +1,59 @@
+# Quartus generated folders / databases
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+.qsys_edit/
+
+# Quartus generated files
+*.qws
+*.qdf
+*.qdb
+*.qmsg
+*.rpt
+*.summary
+*.smsg
+*.jdi
+*.sof
+*.pof
+*.rbf
+*.sdc
+*.cdf
+
+# Simulation / generated timing files
+*.vcd
+*.wlf
+*.do
+*.hex
+*.mif
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+~$*
+
+# Private/local
+.env
+.env.*
+private/
