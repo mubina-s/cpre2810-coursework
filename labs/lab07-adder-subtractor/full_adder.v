@@ -1,0 +1,6 @@
+module FA(X, Y, Cin, Cout,S);
+input Cin, X, Y;
+output Cout, S;
+assign S = X^Y^Cin;
+assign Cout = X&Y|Cin&(X^Y);
+endmodule

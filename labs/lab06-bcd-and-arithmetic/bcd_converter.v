@@ -1,0 +1,15 @@
+module bcd_converter (C0, S3, S2, S1, S0, N2X3, N2X2, N2X1, N2X0, N1X3, N1X2, N1X1, N1X0);
+input wire C0, S3, S2, S1, S0;
+ output wire N2X3, N2X2, N2X1, N2X0;
+ output wire N1X3, N1X2, N1X1, N1X0;
+ 
+ assign N2X3= 1'b0;
+ assign N2X2= 1'b0;
+ assign N2X1= C0&(S3|S2);
+ assign N2X0= ~C0&S3&(S1|S2)|(S3&S2&S1)|(C0&~S3&~S2);
+ assign N1X3= ~C0&S3&~S2&~S1|C0&~S3&~S2&S1|S3&S2&~S1;
+ assign N1X2= ~C0&S2&~S3|S1|C0&~S2&~S1|S3;
+ assign N1X1= ~S3&S1&~C0|S2|~C0&S3&S1&~S1|C0&~S2&~S3&~S1|S3&S1;
+ assign N1X0= S0;
+ endmodule
+ 
